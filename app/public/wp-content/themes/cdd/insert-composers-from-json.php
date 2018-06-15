@@ -4,10 +4,16 @@
 //Testing Mode First
 $test = false;
 
+//Add JSON to import here. Short example (3 composers) included below.
 $json = '{
-  "feed":[]
+  "feed":[
+    {"genres":["chorus","chamber","voice","electroacoustic & installation"],"medium":["string quartet"],"demographics":["West Asian/North African","Other"],"country":"USA","objectID":0,"name":"Abbasi, Anahita","living":true,"gender":"female","city/state short":"San Diego, CA","location":"San Diego, California, USA","URL":"http://anahitaabbasi.com/"},
+    {"genres":["orchestra","wind band","chorus","chamber","voice","opera"],"medium":["string quartet","Pierrot ensemble"],"demographics":["White"],"country":"Australia","objectID":1,"name":"Abbott, Katy","living":true,"gender":"female","city/state short":"Melbourne","location":"Melbourne, Australia","URL":"http://www.katyabbott.com/"},
+    {"genres":["jazz/improvisation","songwriting"],"medium":[],"demographics":["White"],"country":"Switzerland","objectID":2,"name":"Abbuehl, Susanne","living":true,"gender":"female","city/state short":"Lucerne","location":"Lucerne, Switzerland","URL":"http://www.susanneabbuehl.com/"}
+  ]
 }';
 
+//Create array from JSON
 $array = json_decode($json, true);
 
 if($array) {
